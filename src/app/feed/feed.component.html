@@ -1,0 +1,13 @@
+<!-- Note: MatTable can be used for dynamic rows and columns -->
+<table>
+    <tr>
+        <th *ngFor="let column of tableHeaders">{{column | uppercase}}</th>
+    </tr>
+    <tr *ngFor="let row of prices">
+        <td>{{row.uid}}</td>
+        <td>{{row.instrument}}</td>
+        <td>{{row.bid}}</td>
+        <td>{{row.ask}}</td>
+        <td>{{row.timestamp | date}}</td>
+    </tr>
+</table>
